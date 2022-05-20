@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
+
+
 
     <TextView
         android:id="@+id/main"
@@ -31,7 +34,7 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.170"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,10 +51,9 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:id="@+id/two"
@@ -62,9 +64,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintHorizontal_bias="0.830"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/four"
@@ -78,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.676" />
 
     <TextView
         android:id="@+id/three"
@@ -89,10 +92,11 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintHorizontal_bias="0.680"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.676"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn"
@@ -106,5 +110,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.14" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/first_circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/second_circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/third_circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.687"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/fourth_circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/fifth_circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50"
+        app:srcCompat="@drawable/ic_circle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,9 @@
     <string name="four">4</string>
     <string name="five">5</string>
     <string name="clear">clear</string>
+    <string name="first_circle">first_circle</string>
+    <string name="second_circle">first_circle</string>
+    <string name="third_circle">first_circle</string>
+    <string name="fourth_circle">first_circle</string>
+    <string name="fifth_circle">first_circle</string>
 </resources>
