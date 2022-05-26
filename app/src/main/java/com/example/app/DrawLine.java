@@ -5,56 +5,58 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
-import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
 
 public class DrawLine extends View {
+    private final Paint mPaint;
+    private float startX;
+    private float startY;
+    private float endX;
+    private float endY;
 
-    private final Paint paint = new Paint();
-    private final Path path = new Path();
 
 
-    public DrawLine(Context context, AttributeSet attrs){
-        super(context, attrs);
-    }
 
-    public DrawLine(MainActivity context) {
+    public DrawLine(Context context) {
         super(context);
-
-        paint.setAntiAlias(true);
-        paint.setStrokeWidth(5f);
-        paint.setColor(Color.BLACK);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeJoin(Paint.Join.ROUND);
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setColor(Color.RED);
+        mPaint.setStrokeWidth(10);
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        canvas.drawPath(path, paint);
+    @Override protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        canvas.drawLine(startX, startY, endX, endY, mPaint);
     }
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
-    public boolean onTouchEvent(MotionEvent event){
-
-        float eventX = event.getX();
-        float eventY = event.getY();
-
-        switch (event.getAction()){
+    public boolean onTouchEvent(@NonNull MotionEvent event) {
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(eventX, eventY);
+                startX = event.getX();
+                startY = event.getY();
+
+                endX = event.getX();
+                endY = event.getY();
+                invalidate();
                 break;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(eventX, eventY);
+                endX = event.getX();
+                endY = event.getY();
+                invalidate();
                 break;
             case MotionEvent.ACTION_UP:
-                path.reset();
+                startX = event.getX();
+                startY = event.getY();
+                invalidate();
                 break;
         }
-        invalidate();
-    return true;
+        return true;
     }
 }
