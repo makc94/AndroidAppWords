@@ -44,16 +44,9 @@ public class MainActivity extends AppCompatActivity {
         image4 = findViewById(R.id.image4);
         image5 = findViewById(R.id.image5);
 
-
-
-
-
         layout = findViewById(R.id.general);
         DrawLine drawings = new DrawLine(this);
         layout.addView(drawings);
-
-
-
 
 
         View.OnClickListener onClickListener = v -> {
@@ -86,12 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
         drawings.setOnTouchListener((v, event) -> {
 
-
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-
-
-
 
                     if ((event.getX() > 490 && event.getX() < 600) && (event.getY() > 570 && event.getY() < 700))
                         clickMethod(one, image1, "1", 120, 333, 32);
@@ -103,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
                         clickMethod(four, image4, "4", 68, 206, 142);
                     else if ((event.getX() > 160 && event.getX() < 270) && (event.getY() > 820 && event.getY() < 930))
                         clickMethod(five, image5, "5", 202, 206, 68);
-
-                    System.out.println(event.getRawX());
 
                 case MotionEvent.ACTION_MOVE:
 
@@ -118,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
                             clickMethod(four, image4, "4", 68, 206, 142);
                         else if ((event.getX() > 160 && event.getX() < 270) && (event.getY() > 820 && event.getY() < 930))
                             clickMethod(five, image5, "5", 202, 206, 68);
-
             }
             return false;
         });
