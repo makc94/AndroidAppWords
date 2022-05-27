@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         image5 = findViewById(R.id.image5);
 
         layout = findViewById(R.id.general);
-        DrawLine drawings = new DrawLine(this);
+        MyDrawView drawings = new MyDrawView(this);
         layout.addView(drawings);
 
 
@@ -95,16 +95,26 @@ public class MainActivity extends AppCompatActivity {
 
                 case MotionEvent.ACTION_MOVE:
 
-                        if ((event.getX() > 490 && event.getX() < 600) && (event.getY() > 570 && event.getY() < 700))
+                        if ((event.getX() > 490 && event.getX() < 600) && (event.getY() > 570 && event.getY() < 700)) {
+//                            drawings.onDraw(event.getX(), event.getY());
                             clickMethod(one, image1, "1", 120, 333, 32);
-                        else if ((event.getX() > 830 && event.getX() < 930) && (event.getY() > 830 && event.getY() < 930))
+                        }
+                        else if ((event.getX() > 830 && event.getX() < 930) && (event.getY() > 830 && event.getY() < 930)) {
+//                            drawings.changeLne(event.getX(), event.getY());
                             clickMethod(two, image2, "2", 68, 72, 206);
-                        else if ((event.getX() > 680 && event.getX() < 790) && (event.getY() > 1130 && event.getY() < 1240))
+                        }
+                        else if ((event.getX() > 680 && event.getX() < 790) && (event.getY() > 1130 && event.getY() < 1240)) {
+//                            drawings.changeLne(event.getX(), event.getY());
                             clickMethod(three, image3, "3", 68, 183, 206);
-                        else if ((event.getX() > 300 && event.getX() < 410) && (event.getY() > 1120 && event.getY() < 1230))
+                        }
+                        else if ((event.getX() > 300 && event.getX() < 410) && (event.getY() > 1120 && event.getY() < 1230)) {
+//                            drawings.changeLne(event.getX(), event.getY());
                             clickMethod(four, image4, "4", 68, 206, 142);
-                        else if ((event.getX() > 160 && event.getX() < 270) && (event.getY() > 820 && event.getY() < 930))
+                        }
+                        else if ((event.getX() > 160 && event.getX() < 270) && (event.getY() > 820 && event.getY() < 930)) {
+//                            drawings.changeLne(event.getX(), event.getY());
                             clickMethod(five, image5, "5", 202, 206, 68);
+                        }
             }
             return false;
         });
